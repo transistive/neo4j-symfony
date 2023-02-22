@@ -12,8 +12,6 @@ use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Loader\XmlFileLoader;
 use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 
-use function sprintf;
-
 /**
  * @author Tobias Nyholm <tobias.nyholm@gmail.com>
  */
@@ -27,7 +25,7 @@ class Neo4jExtension extends Extension
         $configuration = $this->getConfiguration($configs, $container);
         $config = $this->processConfiguration($configuration, $configs);
 
-        $loader = new XmlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
+        $loader = new XmlFileLoader($container, new FileLocator(__DIR__.'/../../config'));
         $loader->load('services.xml');
 
         $this->handleClients($config, $container);
@@ -80,11 +78,11 @@ class Neo4jExtension extends Extension
 
         foreach ($config['clients'] as $name => $data) {
             $connections = [];
-            $serviceId = sprintf('neo4j.client.%s', $name);
+            $serviceId = \sprintf('neo4j.client.%s', $name);
 
             foreach ($data['connections'] as $connectionName) {
                 if (empty($config['connections'][$connectionName])) {
-                    throw new InvalidConfigurationException(sprintf('Client "%s" is configured to use connection named "%s" but there is no such connection', $name, $connectionName));
+                    throw new InvalidConfigurationException(\sprintf('Client "%s" is configured to use connection named "%s" but there is no such connection', $name, $connectionName));
                 }
                 $connections[] = $connectionName;
             }
