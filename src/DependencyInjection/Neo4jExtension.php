@@ -4,7 +4,11 @@ declare(strict_types=1);
 
 namespace Neo4j\Neo4jBundle\DependencyInjection;
 
+use Laudis\Neo4j\Basic\Driver;
+use Laudis\Neo4j\ClientBuilder;
 use Laudis\Neo4j\Contracts\ClientInterface;
+use Laudis\Neo4j\Databags\DriverConfiguration;
+use Laudis\Neo4j\Databags\SessionConfiguration;
 use Symfony\Component\Config\Definition\Exception\InvalidConfigurationException;
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ChildDefinition;
@@ -46,7 +50,7 @@ class Neo4jExtension extends Extension
      */
     public function getConfiguration(array $config, ContainerBuilder $container): Configuration
     {
-        return new Configuration((bool) $container->getParameter('kernel.debug'));
+        return new Configuration();
     }
 
     /**
@@ -59,6 +63,7 @@ class Neo4jExtension extends Extension
 
     private function handleClients(array &$config, ContainerBuilder $container): void
     {
+        SessionConfiguration::
         $firstName = '';
         foreach ($config['connections'] as $name => $data) {
             if ('' === $firstName || 'default' === $name) {
