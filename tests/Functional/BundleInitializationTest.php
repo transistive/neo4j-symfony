@@ -3,11 +3,12 @@
 namespace Neo4j\Neo4jBundle\Tests\Functional;
 
 use Laudis\Neo4j\Contracts\ClientInterface;
+use Symfony\Bundle\FrameworkBundle\Test\KernelTestCase;
 
 /**
  * @author Tobias Nyholm <tobias.nyholm@gmail.com>
  */
-class BundleInitializationTest extends BaseTestCase
+class BundleInitializationTest extends KernelTestCase
 {
     public function testRegisterBundle(): void
     {

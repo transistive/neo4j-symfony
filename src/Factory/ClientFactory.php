@@ -11,11 +11,9 @@ use Laudis\Neo4j\Formatter\OGMFormatter;
 use Laudis\Neo4j\Formatter\SummarizedResultFormatter;
 use Laudis\Neo4j\Types\CypherList;
 use Laudis\Neo4j\Types\CypherMap;
-use Neo4j\Neo4jBundle\Tests\EventHandler;
-use Neo4j\Neo4jBundle\Tests\SymfonyClient;
+use Neo4j\Neo4jBundle\EventHandler;
+use Neo4j\Neo4jBundle\SymfonyClient;
 use Symfony\Contracts\EventDispatcher\EventDispatcherInterface;
-
-use function sprintf;
 
 /**
  * @author Tobias Nyholm <tobias.nyholm@gmail.com>
@@ -48,7 +46,7 @@ final class ClientFactory
         }
 
         if (isset($config['username'], $config['password'])) {
-            return sprintf(
+            return \sprintf(
                 '%s://%s:%s@%s:%d',
                 $config['scheme'] ?? 'bolt',
                 $config['username'],
@@ -58,7 +56,7 @@ final class ClientFactory
             );
         }
 
-        return sprintf(
+        return \sprintf(
             '%s://%s:%d',
             $config['scheme'] ?? 'bolt',
             $config['host'],

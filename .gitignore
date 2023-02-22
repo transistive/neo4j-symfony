@@ -9,3 +9,4 @@
 .idea
 .env
 .php-cs-fixer.cache
+/var

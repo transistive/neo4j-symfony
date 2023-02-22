@@ -19,7 +19,6 @@
     </testsuite>
   </testsuites>
   <php>
-    <server name="SYMFONY_PHPUNIT_VERSION" value="8.5"/>
-    <server name="KERNEL_DIR" value="./Tests/Resources/app"/>
+    <env name="KERNEL_CLASS" value="Neo4j\Neo4jBundle\Tests\App\TestKernel"/>
   </php>
 </phpunit>
