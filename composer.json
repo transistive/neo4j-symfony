@@ -12,6 +12,10 @@
         {
             "name": "Xavier Coureau",
             "email": "xavier@pandawan-technology.com"
+        },
+        {
+            "name": "Ghlen Nagels",
+            "email": "ghlen@nagels.tech"
         }
     ],
     "require": {
