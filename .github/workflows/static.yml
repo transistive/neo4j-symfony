@@ -2,21 +2,6 @@ on: [push, pull_request]
 name: Static analysis
 
 jobs:
-  phpstan:
-    name: PHPStan
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Set up PHP
-        uses: shivammathur/setup-php@2.5.0
-        with:
-          php-version: 7.4
-
-      - name: Download dependencies
-        run: composer update --no-interaction --prefer-dist --optimize-autoloader --prefer-stable
-
   php-cs-fixer:
     name: PHP-CS-Fixer
     runs-on: ubuntu-latest
