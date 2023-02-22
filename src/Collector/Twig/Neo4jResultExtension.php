@@ -2,13 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Neo4j\Neo4jBundle\src\Collector\Twig;
+namespace Neo4j\Neo4jBundle\Collector\Twig;
 
 use Laudis\Neo4j\Types\Node;
 use Twig\Extension\AbstractExtension;
 use Twig\TwigFilter;
-
-use function Neo4j\Neo4jBundle\Collector\Twig\get_debug_type;
 
 /**
  * @author Tobias Nyholm <tobias.nyholm@gmail.com>

@@ -1,6 +1,6 @@
 <?php
 
-namespace Neo4j\Neo4jBundle\src\Events;
+namespace Neo4j\Neo4jBundle\Events;
 
 use Laudis\Neo4j\Databags\Statement;
 use Symfony\Contracts\EventDispatcher\Event;

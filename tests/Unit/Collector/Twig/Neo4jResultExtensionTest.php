@@ -5,7 +5,7 @@ namespace Neo4j\Neo4jBundle\Tests\Unit\Collector\Twig;
 use Laudis\Neo4j\Types\CypherList;
 use Laudis\Neo4j\Types\CypherMap;
 use Laudis\Neo4j\Types\Node;
-use Neo4j\Neo4jBundle\src\Collector\Twig\Neo4jResultExtension;
+use Neo4j\Neo4jBundle\Collector\Twig\Neo4jResultExtension;
 use PHPUnit\Framework\TestCase;
 
 /**

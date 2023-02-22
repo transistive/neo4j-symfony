@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Neo4j\Neo4jBundle\src\EventSubscriber;
+namespace Neo4j\Neo4jBundle\EventSubscriber;
 
-use Neo4j\Neo4jBundle\src\Collector\QueryLogger;
-use Neo4j\Neo4jBundle\src\Events\FailureEvent;
-use Neo4j\Neo4jBundle\src\Events\PostRunEvent;
-use Neo4j\Neo4jBundle\src\Events\PreRunEvent;
+use Neo4j\Neo4jBundle\Collector\QueryLogger;
+use Neo4j\Neo4jBundle\Events\FailureEvent;
+use Neo4j\Neo4jBundle\Events\PostRunEvent;
+use Neo4j\Neo4jBundle\Events\PreRunEvent;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 
 final class LoggerSubscriber implements EventSubscriberInterface

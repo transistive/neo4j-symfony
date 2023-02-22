@@ -1,6 +1,6 @@
 <?php
 
-namespace Neo4j\Neo4jBundle\Tests;
+namespace Neo4j\Neo4jBundle;
 
 use Laudis\Neo4j\Contracts\UnmanagedTransactionInterface;
 use Laudis\Neo4j\Databags\Statement;

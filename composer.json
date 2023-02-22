@@ -40,12 +40,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Neo4j\\Neo4jBundle\\": "src"
+            "Neo4j\\Neo4jBundle\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Neo4j\\Neo4jBundle\\Tests": "tests"
+            "Neo4j\\Neo4jBundle\\Tests": "tests/"
         }
     },
     "config": {

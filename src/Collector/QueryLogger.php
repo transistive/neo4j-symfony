@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Neo4j\Neo4jBundle\src\Collector;
+namespace Neo4j\Neo4jBundle\Collector;
 
 use Countable;
 use Exception;

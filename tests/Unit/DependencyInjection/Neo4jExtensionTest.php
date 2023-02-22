@@ -3,7 +3,7 @@
 namespace Neo4j\Neo4jBundle\Tests\Unit\DependencyInjection;
 
 use Matthias\SymfonyDependencyInjectionTest\PhpUnit\AbstractExtensionTestCase;
-use Neo4j\Neo4jBundle\src\DependencyInjection\Neo4jExtension;
+use Neo4j\Neo4jBundle\DependencyInjection\Neo4jExtension;
 
 /**
  * @author Tobias Nyholm <tobias.nyholm@gmail.com>
@@ -23,7 +23,7 @@ class Neo4jExtensionTest extends AbstractExtensionTestCase
         $this->load();
 
         $this->assertContainerBuilderHasService('neo4j.collector.debug_collector',
-            'Neo4j\Neo4jBundle\src\Collector\Neo4jDataCollector'
+            'Neo4j\Neo4jBundle\Collector\Neo4jDataCollector'
         );
     }
 

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Neo4j\Neo4jBundle\src\DependencyInjection;
+namespace Neo4j\Neo4jBundle\DependencyInjection;
 
 use Laudis\Neo4j\Contracts\ClientInterface;
 use Symfony\Component\Config\Definition\Exception\InvalidConfigurationException;
