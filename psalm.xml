@@ -9,10 +9,10 @@
     errorBaseline="psalm.baseline.xml"
 >
     <projectFiles>
-        <directory name="./" />
+        <directory name="src" />
+        <directory name="tests" />
         <ignoreFiles>
             <directory name="vendor" />
-            <directory name="Tests" />
             <file name=".php-cs-fixer.php" />
         </ignoreFiles>
     </projectFiles>

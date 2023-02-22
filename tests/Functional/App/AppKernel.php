@@ -1,6 +1,6 @@
 <?php
 
-namespace Neo4j\Neo4jBundle\Tests\Functional\app;
+namespace Neo4j\Neo4jBundle\Tests\Functional\App;
 
 use Neo4j\Neo4jBundle\Tests\Neo4jBundle;
 use RuntimeException;
@@ -32,7 +32,7 @@ class AppKernel extends Kernel
         $this->config = $config;
     }
 
-    public function registerBundles()
+    public function registerBundles(): iterable
     {
         return [
             new FrameworkBundle(),

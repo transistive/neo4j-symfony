@@ -17,30 +17,10 @@ use Symfony\Component\Config\Definition\ConfigurationInterface;
  */
 class Configuration implements ConfigurationInterface
 {
-    /**
-     * Whether to use the debug mode.
-     *
-     * @see https://github.com/doctrine/DoctrineBundle/blob/v1.5.2/DependencyInjection/Configuration.php#L31-L41
-     */
-    private bool $debug;
-
-    public function __construct(bool $debug)
-    {
-        $this->debug = $debug;
-    }
-
-    /**
-     * @psalm-suppress All
-     * {@inheritdoc}
-     */
     public function getConfigTreeBuilder(): TreeBuilder
     {
         $treeBuilder = new TreeBuilder('neo4j');
 
-        /*
-         * @phpstan-ignore-next-line
-         * @psalm-suppress All
-         */
         $treeBuilder->getRootNode()
             ->children()
             ->arrayNode('profiling')

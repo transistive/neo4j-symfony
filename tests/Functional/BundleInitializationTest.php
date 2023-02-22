@@ -2,7 +2,6 @@
 
 namespace Neo4j\Neo4jBundle\Tests\Functional;
 
-use InvalidArgumentException;
 use Laudis\Neo4j\Contracts\ClientInterface;
 
 /**
@@ -55,7 +54,7 @@ class BundleInitializationTest extends BaseTestCase
         self::assertInstanceOf(ClientInterface::class, $client);
         $client->getDriver('default');
 
-        $this->expectException(InvalidArgumentException::class);
+        $this->expectException(\InvalidArgumentException::class);
         $client->getDriver('bolt');
     }
 }
